@@ -1,21 +1,29 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ejercicio1;
 
-/**
- *
- * @author Mario
- */
+import java.util.*;
+
 public class Ejercicio1 {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    static String nombre;
+    static int cedula;
+
+    static void Presentar() {
+        System.out.println("El nombre es: " + nombre);
+        System.out.println("La cedula es: " + cedula);
     }
-    
+
+}
+
+class Estudiante {
+
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        Ejercicio1 test = new Ejercicio1();
+        System.out.println("Ingrese el nombre del estudiante: ");
+        test.nombre = teclado.next();
+        System.out.println("Ingrese la cedula del estudiante: ");
+        test.cedula = teclado.nextInt();
+        test.Presentar();
+    }
+
 }
